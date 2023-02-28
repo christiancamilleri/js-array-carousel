@@ -11,6 +11,16 @@
 ° cambio immagine in base all'index
 */
 
+/* 
+- creo variabile transition complete
+- 
+
+
+*/
+
+
+
+
 // creo array img 
 const images =["img/01.webp", "img/02.webp", "img/03.webp", "img/04.webp", "img/05.webp"];
 
@@ -28,21 +38,33 @@ myimgEl.src = images[index];
 
 // - creo evnto click freccia down
 arrowbottomEl.addEventListener("click", function() {
-    
+    // ciclo infinito carosello
+    if(index == 4) {
+     index = 0;
+     index--;
+    }
    // index aumenta di 1 
    index++;
    
    // cambia immagine in base all'index
    myimgEl.src = images[index];
 
+
 });
 
 // creo evento freccia up
 arrowtopEl.addEventListener("click", function() {
+    // ciclo infinito carosello
+    
+    if(index == 0) {
+      index = 4;
+      index++;
+    }
     // index diminuisce di 1 
    index--;
    
    // cambia immagine in base all'index
    myimgEl.src = images[index];
+
 });
 
