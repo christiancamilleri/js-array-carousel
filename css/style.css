@@ -5,19 +5,23 @@
 }
 
 .container {
-    max-width: 600px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
 
     margin-top: 2em;
+    display: flex;
 }
 
 .img-container {
     position: relative;
+    width: 800px;
 }
 
 img {
-    width: 100%;
+    width: 800px;
+    height: 500px;
+    object-fit: cover;
 }
 
 #arrow-top {
@@ -26,6 +30,8 @@ img {
     background-color: lightgrey;
     border-radius: 50%;
     padding: 5px;
+
+    z-index: 3;
 }
 
 #arrow-bottom {
@@ -36,5 +42,24 @@ img {
 
     border-radius: 50%;
     padding: 5px;
+
+    z-index: 3;
     
 }
+
+#aside {
+    position: relative;
+}
+
+.littleimg {
+    height: 100px;
+    width: 300px;
+
+    display: block;
+    opacity: 0.5;
+}
+
+.active {
+    border: 2px solid white;
+    opacity: 1;
+} 
