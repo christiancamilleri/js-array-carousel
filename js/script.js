@@ -38,14 +38,13 @@ myimgEl.src = images[index];
 
 // - creo evnto click freccia down
 arrowbottomEl.addEventListener("click", function() {
+    // index aumenta di 1 
+    index++;
+    
     // ciclo infinito carosello
-    if(index == 4) {
+    if(index >= 5) {
      index = 0;
-     index--;
     }
-   // index aumenta di 1 
-   index++;
-   
    // cambia immagine in base all'index
    myimgEl.src = images[index];
 
@@ -54,15 +53,13 @@ arrowbottomEl.addEventListener("click", function() {
 
 // creo evento freccia up
 arrowtopEl.addEventListener("click", function() {
-    // ciclo infinito carosello
-    
-    if(index == 0) {
-      index = 4;
-      index++;
-    }
     // index diminuisce di 1 
-   index--;
-   
+    index--;
+    
+    // ciclo infinito carosello
+    if(index <= 0) {
+      index = 4;
+    }
    // cambia immagine in base all'index
    myimgEl.src = images[index];
 
